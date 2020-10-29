@@ -1,6 +1,8 @@
 import React from 'react';
 import SelectionBox from '../selectionBox/SelectionBox';
 import Button from '../button/Button';
+import ProgressBar from '../progressBar/ProgressBar';
+
 
 import './Styles.scss';
 
@@ -41,6 +43,9 @@ const LearningModule = ({setGameStatus}) => {
 
   return (
     <div className="learningModule">
+      <div>
+        <ProgressBar />
+      </div>
       { currentQuestion.title &&
         <>
           <div className="learningModule--header">
@@ -51,7 +56,7 @@ const LearningModule = ({setGameStatus}) => {
               { currentQuestion.additionalInfo }
             </div>
           </div>
-
+          
           <div className="learningModule--answerArea">
             <div className="learningModule--selections">
               { possibleAnswers }
